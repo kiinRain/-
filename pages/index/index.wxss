@@ -1,0 +1,39 @@
+/**index.wxss**/
+.container1 view{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.container1 view:nth-child(1){
+  background-color: aqua;
+}
+.container1 view:nth-child(2){
+  background-color: pink;
+}
+.container1 view:nth-child(3){
+  background-color: yellow;
+}
+.container1{
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.scroll1 view{
+  width: 150%;
+  height: 150px;
+  overflow: scroll;
+}
+.scroll1 view:nth-child(1){
+  background-color: azure;
+}
+.scroll1 view:nth-child(2){
+  background-color: aqua;
+}
+.scroll1 view:nth-child(3){
+  background-color: pink;
+}
+.swipers swiper-item{
+  background-color: aqua;
+}

@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view hidden class="container1">
+  <view>龚</view>
+  <view>成</view>
+  <view>雨</view>
+</view>
+<!-- 滚动条标签   -->
+<scroll-view hidden class="scroll1" style="height: 300px;width: 100%;" scroll-y scroll-x>
+  <view>a</view>
+  <view>a</view>
+  <view>a</view>
+</scroll-view>
+<!-- 轮播图 通过indicator-··· 属性修改点点的展示以及active颜色和静态颜色 -->
+<swiper hidden class="swipers" autoplay="" indicator-dots>
+  <swiper-item>
+    <view>1</view>
+    <navigator url="http://mp.weixin.com">点击</navigator>
+  </swiper-item>
+  <swiper-item>2</swiper-item>
+  <swiper-item>3</swiper-item>
+  <swiper-item>4</swiper-item>
+  <swiper-item>5</swiper-item>
+</swiper>
+<!-- text标签 展示可选中的文字 需要添加selectable/user-select-->
+<text selectable>
+  23select 313
+</text>
+<!-- 引用nodes中的代码变成自身节点 -->
+<rich-text nodes="<h1 style='color: #000;'>xxxshisb</h1>"></rich-text>
+<!-- 图片 通过mode变化图片缩放模式-->
+<image hidden style="width: 100%;border: 1px solid #ccc;" src="../../images/dlrb.webp" mode="aspectFit"></image>
+
+<!-- 数据绑定  直接使用index.js中的data中的数据 {{}} -->
+<view>{{testNum > 5 ? "大于5": '小于5'}}1</view>
+<view>{{testNum2 * 100}}</view>
+
+<!-- 事件绑定 -->
+<!-- tap    bindtap/bind:tap   触摸事件     
+        传值需要使用data-*** = " "  在事件中调用event.***获取传过去的值
+    input   bindinput/bind:input 文本框输入事件
+    change  bind~ /bind:~   状态改变触发
+ -->
+
+ <button type="primary" bindtap="btnClick">按钮</button>
+ <button type="primary" bindtap="btnClick1" data-info="{{1}}">+1</button>
